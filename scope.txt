@@ -1,0 +1,214 @@
+This bug bounty program focuses on the Internet Computer Protocol (ICP), core Internet Computer components, and related products. To learn about potential rewards, see the "Rewards" section. If you're new to finding security bugs in ICP dapps, review the security best practices.
+
+================================================================================
+IN SCOPE
+================================================================================
+
+https://github.com/dfinity/ic
+https://github.com/dfinity/ic/tree/master/rs/nns
+https://github.com/dfinity/ic/tree/master/rs/rosetta-api
+https://github.com/dfinity/nns-dapp
+https://nns.ic0.app/
+https://github.com/dfinity/internet-identity
+https://identity.ic0.app/
+https://github.com/dfinity/ic/tree/master/rs/sns
+https://github.com/dfinity/ICRC-1
+https://github.com/dfinity/motoko-base
+https://github.com/dfinity/motoko
+https://github.com/dfinity/sdk
+https://github.com/dfinity/cdk-rs
+https://github.com/dfinity/agent-js
+https://github.com/dfinity/candid
+https://github.com/dfinity/quill
+https://github.com/dfinity/icx-proxy
+https://github.com/dfinity/ic/tree/master/rs/boundary_node
+boundary.ic0.app
+boundary.dfinity.network
+https://github.com/dfinity/exchange-rate-canister
+https://dashboard.internetcomputer.org/
+https://github.com/dfinity/oisy-wallet
+https://github.com/dfinity/chain-fusion-signer
+https://github.com/dfinity/orbit
+
+================================================================================
+FOCUS AREA
+================================================================================
+
+For a bug to be considered for a bounty, it must be within the scope outlined in this section. If you found a bug that is not explicitly in scope, we encourage you to submit it anyway. It may still qualify for a bounty at DFINITY's discretion based on the attack's impact.
+
+--------------------------------------------------------------------------------
+Core Internet Computer Protocol Stack
+--------------------------------------------------------------------------------
+The Internet Computer Protocol is a distributed protocol run by multiple nodes that constitute the Internet Computer blockchain network. It is structured into layers: peer-to-peer, consensus, message routing, and execution. See the protocol documentation and specs. For a good overview of the Internet Computer and to get started, see the documentation.
+
+The Internet Computer Protocol (ICP) GitHub Repository:
+Some important components include the following (protocol implementation spans additional crates):
+  - execution, system_api, canister_sandbox, and embedders
+  - consensus and orchestrator
+  - message routing and xnet
+  - state_manager
+  - p2p and http_endpoints
+  - http_outcalls
+  - crypto
+
+--------------------------------------------------------------------------------
+Governance: Network Nervous System and Service Nervous System
+--------------------------------------------------------------------------------
+Network Nervous System (NNS):
+All aspects of ICP behavior are governed by the community of enthusiasts and users through a democratic governance system called the Network Nervous System (NNS).
+  - Network Nervous System (NNS) on GitHub
+  - Registry on GitHub
+
+Service Nervous System (SNS):
+ICP offers a framework to launch decentralized autonomous organizations (DAOs) called the Service Nervous System (SNS).
+  - Service Nervous System (SNS) on GitHub
+  - Core canisters include SNS Root, SNS-W, SNS Governance, and SNS Swap
+
+--------------------------------------------------------------------------------
+Frontend Applications
+--------------------------------------------------------------------------------
+The NNS front-end dapp provides a user-friendly way to interact with ICP governance.
+  - Network Nervous System dapp on GitHub
+  - Domain: https://nns.ic0.app/
+
+--------------------------------------------------------------------------------
+Financial Integrations
+--------------------------------------------------------------------------------
+ICP provides ledger implementations for the ICP token according to the ICRC standards:
+  - Ledgers on GitHub
+
+Rosetta API:
+  - Rosetta API on GitHub
+
+--------------------------------------------------------------------------------
+Chain Fusion and Cross-Chain Applications
+--------------------------------------------------------------------------------
+Chain-Key (ck) Tokens:
+See Chain Fusion page.
+
+Bitcoin:
+  - Bitcoin integration
+  - ckBTC on GitHub
+
+Ethereum:
+  - ckETH and ckERC20 on GitHub
+  - EVM RPC canister
+
+--------------------------------------------------------------------------------
+Internet Identity
+--------------------------------------------------------------------------------
+  - Internet Identity on GitHub
+  - Domain: https://identity.ic0.app/
+
+--------------------------------------------------------------------------------
+Developer Experience and Tooling: SDK, CDK, Motoko
+--------------------------------------------------------------------------------
+Docs: Developer liftoff guide
+
+  - Motoko, Motoko base library
+  - IC SDK
+  - Rust CDK
+  - JavaScript Agent
+  - Rust Agent
+  - Candid IDL
+  - Cycles Ledger
+  - Quill toolkit
+
+--------------------------------------------------------------------------------
+Internet Computer Infrastructure
+--------------------------------------------------------------------------------
+Node Operating Systems:
+  - Operating Systems on GitHub
+
+Edge Infrastructure: HTTP Gateway and API Boundary Nodes:
+  - HTTP gateway on GitHub
+  - Boundary nodes on GitHub
+  - Domains: boundary.ic0.app, boundary.dfinity.network
+
+Other Infrastructure:
+  - dfinity.network
+  - dfinity.systems
+
+================================================================================
+PROGRAM RULES
+================================================================================
+
+- Do not use off-the-shelf dynamic scanners such as DAST tools on production systems.
+- Make every effort not to damage or restrict the availability of products, services, and infrastructure.
+- Avoid compromising any personal data, interruption, or degradation of any service.
+- Don't access or modify other user data; localize all tests to your accounts.
+- Perform testing only within the scope.
+- Don't exploit any DoS/DDoS vulnerabilities or use social engineering attacks.
+- Don't break any law.
+
+================================================================================
+DISCLOSURE GUIDELINES
+================================================================================
+
+- Do not discuss this program or any vulnerabilities (even resolved ones) outside of the program without explicit consent from the organization.
+- Act responsibly and in good faith during the disclosure process.
+
+================================================================================
+ELIGIBILITY AND COORDINATED DISCLOSURE
+================================================================================
+
+We are happy to thank everyone who submits valid reports which help us improve security. However, only those that meet the following eligibility requirements may receive a monetary reward:
+
+- Abide by the program rules and disclosure guidelines.
+- Ensure that the potential security bug you are reporting is in scope as specified in the Scope & Targets section.
+- Any vulnerability found must be reported as soon as possible after discovery and ideally through hackenproof.com.
+- You must send a clear textual description of the report along with steps to reproduce the issue, including attachments such as screenshots or proof of concept code as necessary.
+- While AI-assisted tools can be very helpful and are encouraged for discovering relevant bugs, their use in identifying vulnerabilities or preparing reports must be clearly disclosed. Keep reports brief, clear, and focused; avoid excessively long or repetitive AI-generated submissions. To ensure accuracy and quality, all participants are expected to personally verify any findings produced with the help of AI tools before submitting them. Reports not meeting these standards may be rejected.
+- You must not be a current employee of DFINITY or one of its contractors.
+- Only use the email address under which you registered your HackenProof account.
+- Do not engage in social engineering techniques or spear-phishing campaigns. Do not cause any harm to the data or the system.
+- Duplicate reports and closely related submissions will be dealt with on a case-by-case basis. If the submissions are determined to be genuine, they may be rewarded based on a lower rewards scale.
+- In case your finding is valid, you might be asked for extra KYC verification to proceed with payments.
+
+================================================================================
+SAFE HARBOR
+================================================================================
+
+- Authorized in accordance with the Computer Fraud and Abuse Act (CFAA) (and/or similar state laws), and we will not initiate or support legal action against you for accidental, good faith violations of this policy.
+- Exempt from the Digital Millennium Copyright Act (DMCA), and we will not bring a claim against you for circumvention of technology controls.
+- Exempt from restrictions in our Terms & Conditions that would interfere with conducting security research, and we waive those restrictions on a limited basis for work done under this policy.
+- Lawful, helpful to the overall security of the Internet, and conducted in good faith.
+- You are expected, as always, to comply with all applicable laws.
+
+================================================================================
+OUT OF SCOPE
+================================================================================
+
+All public websites (not explicitly listed in scope) and 3rd party dapps are out of scope for this bug bounty program. You can report issues, but we don't provide rewards.
+
+Network-level DoS and DDoS is out of scope. Network-level misconfigurations or application or platform-level DoS issues (especially crashes) may qualify for a bounty at DFINITY's discretion based on the attack's impact. We ask researchers not to perform DoS attacks on mainnet and production deployments. This will disqualify you from a bounty and from the bug bounty program entirely. Consider using local setups (e.g., using DFX) to demonstrate crashes, or reach out to us for support in reproducing exploits.
+
+================================================================================
+ADDITIONAL TARGETS / IN SCOPE ITEMS
+================================================================================
+
+--------------------------------------------------------------------------------
+Wallets
+--------------------------------------------------------------------------------
+Oisy:
+Oisy is a new browser-based, network-custodial, and multi-chain wallet powered by Internet Computer's chain fusion technology.
+  - Oisy on GitHub
+  - Chain Fusion Signer on GitHub
+  - Domain: https://oisy.com/
+
+Orbit:
+Orbit is a non-custodial platform for secure digital asset and smart contract management on the Internet Computer. It enables teams to define approval workflows, enforce governance policies, and manage assets with flexibility and transparency.
+  - Orbit on GitHub
+  - Domain: https://orbit.global
+
+--------------------------------------------------------------------------------
+Exchange Rate Canister
+--------------------------------------------------------------------------------
+The exchange rate canister provides an oracle service for cryptocurrency and fiat currency exchange rates. It interacts with all data sources using the HTTPS outcalls feature.
+  - Exchange rate canister on GitHub
+
+--------------------------------------------------------------------------------
+Internet Computer Dashboard
+--------------------------------------------------------------------------------
+The Internet Computer dashboard is a web application that provides visibility into the Internet Computer. It provides metrics and information about governance, network (subnets, data centers, nodes), Chain Fusion, etc.
+  - Domain: https://dashboard.internetcomputer.org/
